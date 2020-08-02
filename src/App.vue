@@ -9,27 +9,14 @@
 
     <div class="container">
 
-      <form>
-
-          <label>Modelo</label>
-          <input type="text" placeholder="Modelo">
-          <label>Algoritmo</label>
-          <input type="text" placeholder="Algoritmo">
-          <label>Tipo</label>
-          <input type="text" placeholder="Tipo">
-
-          <button class="waves-effect waves-light btn-small">Salvar<i class="material-icons left">save</i></button>
-
-      </form>
-
       <table>
 
         <thead>
 
           <tr>
-            <th>Modelo</th>
+            <th>Nome do modelo</th>
             <th>Algoritmo</th>
-            <th>Tipo</th>
+            <th>Tipo do modelo</th>
             <th>Opções</th>
           </tr>
 
