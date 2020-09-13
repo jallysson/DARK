@@ -1,5 +1,4 @@
 <template>
-
   <b-card body-class="p-0" header-class="border-0">
     <template v-slot:header>
       <b-row align-v="center">
@@ -18,7 +17,7 @@
       <el-table-column label="Modelo"
                        min-width="130px"
                        prop="page">
-        <template v-slot="{row}">
+        <template v-slot="{ row }">
           <div class="font-weight-600">{{row.modelName}}</div>
         </template>
       </el-table-column>
@@ -93,7 +92,7 @@
       }
     },
     mounted() {
-    this.list_models()
+      this.list_models()
     },
     methods: {
       list_models(){

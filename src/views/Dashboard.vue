@@ -1,11 +1,11 @@
 <template>
   <div>
 
-    <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-gradient-success">
+    <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-gray">
       <!-- Card stats -->
       <b-row>
         <b-col xl="3" md="6">
-          <stats-card title="Total traffic"
+          <stats-card title="Usuários"
                       type="gradient-red"
                       sub-title="350,897"
                       icon="ni ni-active-40"
@@ -13,12 +13,12 @@
 
             <template slot="footer">
               <span class="text-success mr-2">3.48%</span>
-              <span class="text-nowrap">Since last month</span>
+              <span class="text-nowrap">Desde o último mês</span>
             </template>
           </stats-card>
         </b-col>
         <b-col xl="3" md="6">
-          <stats-card title="Total traffic"
+          <stats-card title="Desempenho"
                       type="gradient-orange"
                       sub-title="2,356"
                       icon="ni ni-chart-pie-35"
@@ -26,12 +26,12 @@
 
             <template slot="footer">
               <span class="text-success mr-2">12.18%</span>
-              <span class="text-nowrap">Since last month</span>
+              <span class="text-nowrap">Desde o último mês</span>
             </template>
           </stats-card>
         </b-col>
         <b-col xl="3" md="6">
-          <stats-card title="Sales"
+          <stats-card title="Projetos"
                       type="gradient-green"
                       sub-title="924"
                       icon="ni ni-money-coins"
@@ -39,13 +39,13 @@
 
             <template slot="footer">
               <span class="text-danger mr-2">5.72%</span>
-              <span class="text-nowrap">Since last month</span>
+              <span class="text-nowrap">Desde o último mês</span>
             </template>
           </stats-card>
 
         </b-col>
         <b-col xl="3" md="6">
-          <stats-card title="Performance"
+          <stats-card title="Avaliações"
                       type="gradient-info"
                       sub-title="49,65%"
                       icon="ni ni-chart-bar-32"
@@ -53,7 +53,7 @@
 
             <template slot="footer">
               <span class="text-success mr-2">54.8%</span>
-              <span class="text-nowrap">Since last month</span>
+              <span class="text-nowrap">Desde o último mês</span>
             </template>
           </stats-card>
         </b-col>
@@ -63,7 +63,7 @@
     <!--Charts-->
     <b-container fluid class="mt--7">
       <b-row>
-        <b-col xl="4" class="mb-5 mb-xl-0">
+        <b-col xl="8" class="mb-5 mb-xl-0">
           <card header-classes="bg-transparent">
             <b-row align-v="center" slot="header">
               <b-col>
@@ -73,7 +73,7 @@
             </b-row>
 
             <line-chart
-              :height="350"
+              :height="250"
               ref="lineChart"
               :chart-data="redBarChart.chartData"
             >
@@ -82,6 +82,46 @@
         </b-col>
 
         <b-col xl="4" class="mb-5 mb-xl-0">
+          <card header-classes="bg-transparent">
+            <b-row align-v="center" slot="header">
+              <b-col>
+                <h6 class="text-uppercase text-muted ls-1 mb-1">Desempenho</h6>
+                <h5 class="h3 mb-0">Qtd. Avaliações</h5>
+              </b-col>
+            </b-row>
+
+            <bar-chart
+              :height="250"
+              ref="lineChart"
+              :chart-data="redBarChart.chartData"
+            >
+            </bar-chart>
+          </card>
+        </b-col>
+      </b-row>
+
+      <br>
+
+      <b-row>
+        <b-col xl="6" class="mb-5 mb-xl-0">
+          <card header-classes="bg-transparent">
+            <b-row align-v="center" slot="header">
+              <b-col>
+                <h6 class="text-uppercase text-muted ls-1 mb-1">Desempenho</h6>
+                <h5 class="h3 mb-0">Precisão</h5>
+              </b-col>
+            </b-row>
+
+            <line-chart
+              :height="250"
+              ref="lineChart"
+              :chart-data="redBarChart.chartData"
+            >
+            </line-chart>
+          </card>
+        </b-col>
+
+        <b-col xl="6" class="mb-5 mb-xl-0">
           <card header-classes="bg-transparent">
             <b-row align-v="center" slot="header">
               <b-col>
@@ -91,25 +131,7 @@
             </b-row>
 
             <line-chart
-              :height="350"
-              ref="lineChart"
-              :chart-data="redBarChart.chartData"
-            >
-            </line-chart>
-          </card>
-        </b-col>
-
-        <b-col xl="4" class="mb-5 mb-xl-0">
-          <card header-classes="bg-transparent">
-            <b-row align-v="center" slot="header">
-              <b-col>
-                <h6 class="text-uppercase text-muted ls-1 mb-1">Desempenho</h6>
-                <h5 class="h3 mb-0">F-Score</h5>
-              </b-col>
-            </b-row>
-
-            <line-chart
-              :height="350"
+              :height="250"
               ref="lineChart"
               :chart-data="redBarChart.chartData"
             >
@@ -161,8 +183,8 @@
       return {
         bigLineChart: {
           allData: [
-            [0, 20, 10, 30, 15, 40, 20, 60, 60],
-            [0, 20, 5, 25, 10, 30, 15, 40, 40]
+            [0, 15, 35, 20, 10, 30, 15, 40, 20, 60, 60],
+            [0, 20, 38, 20, 5, 25, 10, 30, 15, 40, 40]
           ],
           activeIndex: 0,
           chartData: {
@@ -178,10 +200,10 @@
         },
         redBarChart: {
           chartData: {
-            labels: ['Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
             datasets: [{
               label: 'Sales',
-              data: [25, 20, 30, 22, 17, 29]
+              data: [7, 45, 25, 41, 58, 11, 25, 20, 30, 22, 17, 29]
             }]
           },
           extraOptions: chartConfigs.blueChartOptions

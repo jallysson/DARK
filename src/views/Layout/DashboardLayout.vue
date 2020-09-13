@@ -7,7 +7,7 @@
           :link="{
             name: 'Dashboard',
             path: '/dashboard',
-            icon: 'ni ni-tv-2 text-green',
+            icon: 'ni ni-planet text-orange',
           }"
         >
         </sidebar-item>
@@ -16,7 +16,7 @@
             :link="{
               name: 'Modelos',
               path: '/icons',
-              icon: 'ni ni-planet text-blue'
+              icon: 'ni ni-atom text-green'
               }"
             >
         </sidebar-item>
@@ -25,7 +25,7 @@
                 :link="{
                   name: 'Projetos',
                   path: '/tables',
-                  icon: 'ni ni-bullet-list-67 text-orange'
+                  icon: 'ni ni-spaceship text-blue'
                 }">
         </sidebar-item>
       </template>
