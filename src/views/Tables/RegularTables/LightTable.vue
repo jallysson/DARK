@@ -26,8 +26,8 @@
                              prop="status">
                 <template v-slot="{row}">
                     <badge class="badge-dot mr-4" type="">
-                        <i :class="`bg-${'warning'}`"></i>
-                        <span class="status" :class="`text-${'warning'}`">{{'pending'}}</span>
+                        <i :class="`bg-${'success'}`"></i>
+                        <span class="status" :class="`text-${'success'}`">{{'concluído'}}</span>
                     </badge>
                 </template>
             </el-table-column>
@@ -57,9 +57,9 @@
                              min-width="240px">
                 <template v-slot="{row}">
                     <div class="d-flex align-items-center">
-                        <span class="completion mr-2">{{60}}%</span>
+                        <span class="completion mr-2">{{ 100 }}%</span>
                         <div>
-                            <base-progress :type="'warning'" :value="60"/>
+                            <base-progress :type="'success'" :value="100"/>
                         </div>
                     </div>
                 </template>

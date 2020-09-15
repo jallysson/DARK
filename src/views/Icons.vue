@@ -1,7 +1,7 @@
 <template>
   <div>
        <!-- BootstrapVue Done -->
-    <base-header class="pb-8 pt-5 bg-gray">
+    <base-header class="pb-8 pt-5 bg-slack">
     </base-header>
 
     <b-container fluid class="mt--7">

@@ -7,7 +7,7 @@
           :link="{
             name: 'Dashboard',
             path: '/dashboard',
-            icon: 'ni ni-planet text-orange',
+            icon: 'ni ni-planet text-green',
           }"
         >
         </sidebar-item>
@@ -25,7 +25,7 @@
                 :link="{
                   name: 'Projetos',
                   path: '/tables',
-                  icon: 'ni ni-spaceship text-blue'
+                  icon: 'ni ni-spaceship text-green'
                 }">
         </sidebar-item>
       </template>
