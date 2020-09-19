@@ -68,17 +68,17 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #5e72e4 !default;
-$indigo:  #5603ad !default;
-$purple:  #8965e0 !default;
-$pink:    #f3a4b5 !default;
-$red:     #f5365c !default;
-$orange:  #fb6340 !default;
-$yellow:  #ffd600 !default;
-$green:   #2dce89 !default;
-$teal:    #11cdef !default;
-$cyan:    #2bffc6 !default;
-$slack:   #3aaf85 !default;
+$blue:     #5e72e4 !default;
+$indigo:   #5603ad !default;
+$purple:   #8965e0 !default;
+$pink:     #f3a4b5 !default;
+$red:      #f5365c !default;
+$orange:   #fb6340 !default;
+$yellow:   #ffd600 !default;
+$green:    #2dce89 !default;
+$teal:     #11cdef !default;
+$cyan:     #2bffc6 !default;
+$slack:    #3aaf85 !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -97,11 +97,11 @@ $colors: map-merge((
   "light":      $gray-400,
   "lighter":    $gray-200,
   "gray-dark":  $gray-800,
-  "slack": $slack
+  "slack":      $slack,
 ), $colors);
 
 $default:       #172b4d !default;
-$primary:       #5e72e4 !default;
+$primary:       #2dce89 !default;
 $secondary:     #f7fafc !default;
 $success:       $green !default;
 $info:          $teal !default;
@@ -152,7 +152,7 @@ $brand-colors: map-merge((
 $shape-colors: () !default;
 $shape-colors: map-merge((
   "default":      #32325d,
-  "primary":      #5533ff,
+  "primary":      #2dce89,
   "secondary":    #24b47e,
   "neutral":      #e9ecef,
   "blue-gray":    #b2cbe1,
@@ -1000,7 +1000,7 @@ $footer-padding-x:              0;
 
 $footer-link-font-size: .85rem !default;
 $footer-bg: theme-color("secondary") !default;
-$footer-color: $gray-600 !default;
+$footer-color: $green !default;
 $footer-link-color: $gray-600 !default;
 $footer-link-hover-color: $gray-700 !default;
 $footer-heading-color: $gray-600 !default;

@@ -53,7 +53,7 @@
     methods: {
       onCopy() {
         this.$notify({
-          type: 'info',
+          type: 'success',
           message: 'Copied to clipboard'
         })
       },

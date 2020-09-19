@@ -68,7 +68,7 @@
             <b-row align-v="center" slot="header">
               <b-col>
                 <h6 class="text-uppercase text-muted ls-1 mb-1">Desempenho</h6>
-                <h5 class="h3 mb-0">Precisão</h5>
+                <h5 class="h3 mb-0">F-score</h5>
               </b-col>
             </b-row>
 
