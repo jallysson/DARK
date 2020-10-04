@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-secundary" id="sidenav-main">
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-gradient-white" id="sidenav-main">
         <div class="container-fluid">
 
             <!--Toggler-->
