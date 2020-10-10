@@ -28,6 +28,15 @@
                   icon: 'ni ni-spaceship text-black'
                 }">
         </sidebar-item>
+
+        <sidebar-item
+                :link="{
+                  name: 'Temp',
+                  path: '/profile',
+                  icon: 'ni ni-spaceship text-red'
+                }">
+        </sidebar-item>
+
       </template>
 
       <template slot="links-after">

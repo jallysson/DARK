@@ -61,7 +61,7 @@
       <b-row>
 
         <b-col xl="3" md="6">
-          <stats-card title="Aval. por modelo"
+          <stats-card title="Aval. I"
                       type="blue"
                       sub-title="10,17"
                       icon="ni ni-calendar-grid-58"
@@ -75,7 +75,7 @@
         </b-col>
 
         <b-col xl="3" md="6">
-          <stats-card title="Aval. por modelos distintos"
+          <stats-card title="Aval. II"
                       type="blue"
                       sub-title="49,32"
                       icon="ni ni-calendar-grid-58"
@@ -132,7 +132,7 @@
             </b-row>
 
             <line-chart
-              :height="250"
+              :height="200"
               ref="lineChart"
               :chart-data="redBarChart.chartData"
             >
@@ -150,7 +150,7 @@
             </b-row>
 
             <line-chart
-              :height="250"
+              :height="200"
               ref="lineChart"
               :chart-data="redBarChart.chartData"
             >
@@ -168,7 +168,7 @@
             </b-row>
 
             <line-chart
-              :height="250"
+              :height="200"
               ref="lineChart"
               :chart-data="redBarChart.chartData"
             >
@@ -191,7 +191,7 @@
             </b-row>
 
             <bar-chart
-              :height="250"
+              :height="200"
               ref="lineChart"
               :chart-data="redBarChart.chartData"
             >
@@ -209,7 +209,7 @@
             </b-row>
 
             <bar-chart
-              :height="250"
+              :height="200"
               ref="lineChart"
               :chart-data="redBarChart.chartData"
             >
@@ -232,7 +232,7 @@
             </b-row>
 
             <line-chart
-              :height="250"
+              :height="200"
               ref="lineChart"
               :chart-data="redBarChartDay.chartData"
             >

@@ -2,139 +2,137 @@
   <card>
     <b-row align-v="center" slot="header" >
       <b-col cols="8">
-        <h3 class="mb-0">Edit profile </h3>
-      </b-col>
-      <b-col cols="4" class="text-right">
-        <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+        <h3 class="mb-0">Criar projeto</h3>
       </b-col>
     </b-row>
 
-    <b-form @submit.prevent="updateProfile">
-      <h6 class="heading-small text-muted mb-4">User information</h6>
+    <form @submit.prevent="training">
+      <h6 class="heading-small text-muted mb-4">Informações do projeto</h6>
 
       <div class="pl-lg-4">
         <b-row>
           <b-col lg="6">
-            <base-input
+            <base-input 
               type="text"
-              label="Username"
-              placeholder="Username"
-              v-model="user.username"
+              label="Nome"
+              placeholder=""
+              v-model="training_parameters.modelName"
             >
             </base-input>
           </b-col>
-          <b-col lg="6">
-            <base-input
-              type="email"
-              label="Email address"
-              placeholder="mike@email.com"
-              v-model="user.email"
-            >
-            </base-input>
-          </b-col>
-        </b-row>
-        <b-row >
-          <b-col lg="6">
-            <base-input
-              type="text"
-              label="First Name"
-              placeholder="First Name"
-              v-model="user.firstName"
-            >
-            </base-input>
-          </b-col>
-          <b-col lg="6">
-            <base-input
-              type="text"
-              label="Last Name"
-              placeholder="Last Name"
-              v-model="user.lastName"
-            >
-            </base-input>
-          </b-col>
-        </b-row>
-      </div>
-      <hr class="my-4">
 
-      <!-- Address -->
-      <h6 class="heading-small text-muted mb-4">Contact information</h6>
+          <b-col lg="6">
+            <base-input label="Tipo">
+              <select class="form-control" type="text" v-model="training_parameters.typeLearning">
+                <option>classification</option>
+              </select>
+            </base-input>
+          </b-col>
 
-      <div class="pl-lg-4">
-        <b-row>
-          <b-col md="12">
-            <base-input
-              type="text"
-              label="Address"
-              placeholder="Home Address"
-              v-model="user.address"
-            >
+          <b-col lg="6">
+            <base-input label="Algoritmo">
+              <select class="form-control" type="text" v-model="training_parameters.model">
+                <option>svm</option>
+              </select>
             </base-input>
           </b-col>
+
+          <b-col lg="6">
+            <base-input label="Dataset">
+              <select class="form-control" type="text" v-model="training_parameters.datasetName">
+                <option>a1_va3</option>
+              </select>
+            </base-input>
+          </b-col>
+
+          <b-col lg="6">
+            <base-input label="Target">
+              <select class="form-control" type="text" v-model="training_parameters.targetColumn">
+                <option>Phase</option>
+              </select>
+            </base-input>
+          </b-col>
+
         </b-row>
-        <b-row>
-          <b-col lg="4">
-            <base-input
-              type="text"
-              label="City"
-              placeholder="City"
-              v-model="user.city"
-            >
-            </base-input>
-          </b-col>
-          <b-col lg="4">
-            <base-input
-              type="text"
-              label="Country"
-              placeholder="Country"
-              v-model="user.country"
-            >
-            </base-input>
-          </b-col>
-          <b-col lg="4">
-            <base-input
-              label="Postal Code"
-              placeholder="ZIP Code"
-              v-model="user.postalCode"
-            >
-            </base-input>
-          </b-col>
-        </b-row>
+        
       </div>
 
       <hr class="my-4">
-      <!-- Description -->
-      <h6 class="heading-small text-muted mb-4">About me</h6>
-      <div class="pl-lg-4">
-        <b-form-group label="About Me" label-class="form-control-label" class="mb-0" label-for="about-form-textaria">
-         <!--  <label class="form-control-label">About Me</label> -->
-          <b-form-textarea rows="4" value="A beautiful premium dashboard for BootstrapVue." id="about-form-textaria" placeholder="A few words about you ..."></b-form-textarea>
-        </b-form-group>
-      </div>
 
-    </b-form>
+    <div>
+      <b-alert
+        :show="dismissCountDown"
+        dismissible
+        fade
+        variant="success"
+        @dismiss-count-down="countDownChanged"
+      >
+        <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+        <span class="alert-inner--text"><strong> Sucesso! </strong>O projeto foi criado ;)</span>
+         ... {{ dismissCountDown }} segundos...
+      </b-alert>
+
+    </div>
+      
+      <button class="btn btn-primary" title="Iniciar"><i class="ni ni-spaceship"></i> Start</button> 
+
+    </form>
+
+    <!--Notice modal-->
+      <modal :show.sync="modals.notice"
+          modal-classes="modal-success"
+          modal-content-classes="bg-success">
+        <h4 slot="header" class="modal-title">D A R K</h4>
+
+        <div class="py-3 text-center">
+          <i class="ni ni-spaceship ni-3x"></i>
+          <h4 class="heading mt-4">Nosso projeto foi criado =D</h4>
+          <p>Nos já podemos conferir ele na página de projetos, e acompanhar o seu progresso.</p>
+        </div>
+
+        <template slot="footer">
+          <base-button type="link" class="text-white">VAMOS VER :D</base-button>
+          <base-button type="link" class="text-white ml-auto" @click="modals.notice = false">RETORNAR</base-button>
+        </template>
+
+      </modal>
+
   </card>
 </template>
 <script>
+
+import adam_models from '../../../services/adam_models'
+
 export default {
   data() {
     return {
-      user: {
-        company: 'Creative Code Inc.',
-        username: 'michael23',
-        email: '',
-        firstName: 'Mike',
-        lastName: 'Andrew',
-        address: 'Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09',
-        city: 'New York',
-        country: 'USA',
-        postalCode: '',
-        aboutMe: `Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.`
+      training_parameters: {
+         modelName: '',
+         model: '',
+         typeLearning: '',
+         datasetName: '',
+         targetColumn: ''
+      },
+      dismissSecs: 60,
+      dismissCountDown: 0,
+      showDismissibleAlert: false,
+      statusSuccess: false,
+      modals: {
+        notice: false
       }
-    };
+    }
   },
   methods: {
-    updateProfile() {
-      alert('Your data: ' + JSON.stringify(this.user));
+    training() {
+      adam_models.model_training(this.training_parameters).then(response => {
+        this.training_parameters = {}
+        // this.dismissCountDown = this.dismissSecs
+        this.modals.notice = true
+        console.log(response)
+      })
+    },
+    countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown
     }
   }
 };

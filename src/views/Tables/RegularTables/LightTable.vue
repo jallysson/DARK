@@ -1,7 +1,9 @@
 <template>
     <b-card no-body>
         <b-card-header class="border-0">
-            <!-- <h3 class="mb-0">Modelos</h3> -->
+            <!-- <h3 class="mb-0">Todos os projetos</h3> -->
+            <button class="btn btn-success" onclick="window.location.href='localhost:8080/#/tables';"><i class="ni ni-spaceship"></i> Novo</button>
+
         </b-card-header>
 
         <el-table class="table-responsive table"

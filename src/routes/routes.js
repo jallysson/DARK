@@ -19,12 +19,12 @@ const routes = [
       },
       {
         path: '/icons',
-        name: 'Modelos',
+        name: 'modelos',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Icons.vue')
       },
       {
         path: '/profile',
-        name: 'profile',
+        name: 'temp',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')
       },
       {
@@ -34,7 +34,7 @@ const routes = [
       },
       {
         path: '/tables',
-        name: 'Projetos',
+        name: 'projetos',
         component: () => import(/* webpackChunkName: "demo" */ '../views/RegularTables.vue')
       }
     ]
