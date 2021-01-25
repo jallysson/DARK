@@ -1,15 +1,16 @@
 <template>
-  <card>
-    <b-row align-v="center" slot="header" >
-      <b-col cols="8">
-        <h3 class="mb-0">Criar projeto</h3>
+
+  <card class="bg-primary">
+    <b-row align-v="center" slot="header" class="bg-primary">
+      <b-col cols="8" class="bg-primary">
+        <h3 class="mb-0 bg-primary">Criar projeto</h3>
       </b-col>
     </b-row>
 
     <form @submit.prevent="training">
-      <h6 class="heading-small text-muted mb-4">Informações do projeto</h6>
+      <h6 class="heading-small text-muted mb-4 bg-primary">Informações do projeto</h6>
 
-      <div class="pl-lg-4">
+      <div class="pl-lg-4 bg-primary">
         <b-row>
           <b-col lg="6">
             <base-input 
@@ -57,7 +58,7 @@
         
       </div>
 
-      <hr class="my-4">
+      <hr class="my-4 bg-primary">
 
     <div>
       <b-alert

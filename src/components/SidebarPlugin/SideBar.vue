@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-gradient-white" id="sidenav-main">
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-primary" id="sidenav-main">
         <div class="container-fluid">
 
             <!--Toggler-->
@@ -80,30 +80,7 @@
                     </slot>
                 </ul>
                 <!--Divider-->
-                <hr class="my-3">
-                <!--Heading-->
-                <h6 class="navbar-heading text-muted">Documentação</h6>
-                <!--Navigation-->
-                <ul class="navbar-nav mb-md-3">
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="https://www.creative-tim.com/learning-lab/bootstrap-vue/alerts/argon-dashboard">
-                            <i class="ni ni-spaceship"></i> Getting started
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="https://www.creative-tim.com/learning-lab/bootstrap-vue/colors/argon-dashboard">
-                            <i class="ni ni-palette"></i> Foundation
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="https://www.creative-tim.com/learning-lab/bootstrap-vue/alerts/argon-dashboard">
-                            <i class="ni ni-ui-04"></i> Components
-                        </a>
-                    </li>
-                </ul>
+                <!-- <hr class="my-3"> -->
             </div>
             </div>
     </nav>

@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-white">
+  <div class="bg-primary">
+    <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-primary">
      
     </base-header>
     
-    <b-container fluid class="mt--7 bg-white">
-      <b-row>
-        <b-col>
+    <b-container fluid class="mt--7 bg-primary">
+      <b-row class="bg-primary">
+        <b-col class="bg-primary">
           <light-table/>
         </b-col>
       </b-row>
-      <div class="mt-5"></div>
+      <div class="mt-5 bg-primary"></div>
       <dark-table></dark-table>
     </b-container>
   </div>
@@ -42,13 +42,13 @@
 </script>
 <style>
 .el-table.table-dark{
-  background-color: #172b4d;
+  background-color: #222831;
   color: #f8f9fe;
 }
 
 .el-table.table-dark th,
 .el-table.table-dark tr{
-  background-color: #172b4d;
+  background-color: #222831;
 }
 
 .el-table.table-dark td,

@@ -20,7 +20,7 @@ export const Charts = {
     },
     theme: {
       'default': '#172b4d',
-      'primary': '#2dce89',
+      'primary': '#222831',
       'secondary': '#f4f5f7',
       'info': '#11cdef',
       'success': '#2dce89',

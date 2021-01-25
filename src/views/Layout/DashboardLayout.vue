@@ -7,7 +7,7 @@
           :link="{
             name: 'Dashboard',
             path: '/dashboard',
-            icon: 'ni ni-planet text-black',
+            icon: 'ni ni-planet text-slack',
           }"
         >
         </sidebar-item>
@@ -16,7 +16,7 @@
             :link="{
               name: 'Modelos',
               path: '/icons',
-              icon: 'ni ni-atom text-black'
+              icon: 'ni ni-atom text-slack'
               }"
             >
         </sidebar-item>
@@ -25,7 +25,7 @@
                 :link="{
                   name: 'Projetos',
                   path: '/tables',
-                  icon: 'ni ni-spaceship text-black'
+                  icon: 'ni ni-spaceship text-slack'
                 }">
         </sidebar-item>
 
@@ -33,7 +33,7 @@
                 :link="{
                   name: 'Temp',
                   path: '/profile',
-                  icon: 'ni ni-spaceship text-red'
+                  icon: 'ni ni-spaceship text-slack'
                 }">
         </sidebar-item>
 

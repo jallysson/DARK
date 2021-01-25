@@ -24,7 +24,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: $white;
+            background: $primary;
             z-index: 1;
             transform: translate(-50%, -50%);
             @include box-shadow($box-shadow);
