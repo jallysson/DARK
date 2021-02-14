@@ -1,7 +1,7 @@
 <template>
   <div>
 
-<base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-white">
+<base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-black">
       <!-- Card stats -->
       <b-row>
         <b-col xl="3" md="6">
@@ -120,7 +120,7 @@
     </base-header>
 
     <!--Charts-->
-    <b-container fluid class="mt--7 bg-white">
+    <b-container fluid class="mt--7 bg-black">
       <b-row>
         <b-col xl="4" class="mb-5 mb-xl-0">
           <card header-classes="bg-transparent">

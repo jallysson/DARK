@@ -1,10 +1,10 @@
 <template>
   <div>
-    <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-white">
+    <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-black">
      
     </base-header>
     
-    <b-container fluid class="mt--7 bg-white">
+    <b-container fluid class="mt--7 bg-black">
       <b-row>
         <b-col>
           <light-table/>

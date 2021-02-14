@@ -25,7 +25,9 @@ $gray-600: #8898aa !default;   // Line footer color
 $gray-700: #525f7f !default;   // Line p color
 $gray-800: #32325d !default;   // Line heading color
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black:    #433d3c !default;
+$background:    #252525 !default;
+$github:        #222222 !default;
 
 $grays: () !default;
 $grays: map-merge((
@@ -53,7 +55,8 @@ $teal:     #11cdef !default;
 $cyan:     #2bffc6 !default;
 $black:    #000 !default;
 $slack:    #3aaf85 !default;
-$background:    #f6f6f6 !default;
+$background:    #252525 !default;
+$github:        #222222 !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -74,7 +77,8 @@ $colors: map-merge((
   "gray-dark":  $gray-800,
   "black":      $black,
   "slack":      $slack,
-  "background": $background
+  "background": $background,
+  "github": $github
 ), $colors);
 
 $default:       #172b4d !default;
